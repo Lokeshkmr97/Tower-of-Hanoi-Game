@@ -1,0 +1,260 @@
+/* all elements */
+
+* {
+  font-family: "Space Mono", monospace;
+  font-weight: bold !important;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+}
+
+
+/* body */
+
+body {
+  background-image: url(./assets/background.jpg);
+  background-repeat: none;
+  background-position: center;
+  background-size: 15em;
+  background-color: #eee!important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 1em;
+  width: 100vw;
+  height: 100vh;
+  padding: 1em !important;
+}
+
+i,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px!important;
+}
+
+/* drop down */
+
+.drop-down,
+.drop-down:hover,
+.drop-down:active {
+  background-color: #00000000;
+  color: #000;
+  border: 0px !important;
+}
+
+.dropdown-menu.show {
+  background-color: #eee;
+  color: #000;
+  border: 1px solid #000 !important;
+}
+
+.drop-down-options {
+  color: #000;
+}
+
+.list {
+  width: 8em;
+  display: inline-block;
+  margin-left: 1em !important;
+}
+
+a,
+.list>a {
+  color: #000;
+  margin: 0.5em 0.3em !important;
+}
+
+
+/* icon */
+
+.icon {
+  margin-right: 0.5em !important;
+}
+
+
+/* row */
+
+.r {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5em !important;
+  gap: 1em;
+  width: 100%;
+  height: fit-content;
+}
+
+.rr {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0.5em !important;
+  gap: 1em;
+  width: 100%;
+  height: fit-content;
+}
+
+.fw {
+  flex-wrap: wrap;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcsa {
+  justify-content: space-around;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.jcse {
+  justify-content: space-evenly;
+}
+
+
+/* column */
+
+.c {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em !important;
+  gap: 1em;
+  width: 100%;
+  height: fit-content;
+}
+
+.cr {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0.5em !important;
+  /* gap: 1em; */
+  width: 100%;
+  height: fit-content;
+}
+
+.aic {
+  align-items: center;
+}
+
+.aifs {
+  align-items: flex-start;
+}
+
+.aife {
+  align-items: flex-end;
+}
+
+.ais {
+  align-items: start;
+}
+
+.aie {
+  align-items: end;
+}
+
+.aiss {
+  align-items: self-start;
+}
+
+.aise {
+  align-items: self-end;
+}
+
+.aistr {
+  align-items: stretch;
+}
+
+/* text align */
+
+.center {
+  width: 100%;
+  text-align: center;
+}
+
+
+/* sweet alert styling */
+
+.swal2-confirm:focus,
+.swal2-deny:focus,
+.swal2-cancel:focus,
+.swal2-input:focus {
+  box-shadow: 0 0 4px #000 !important;
+}
+
+.tower {
+  background-color: #c870e6 !important;
+  width: 1em;
+  height: 40vh;
+  border-radius: 10px !important;
+  border: 0px !important;
+}
+
+.block {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  cursor: move;
+  border: 0px !important;
+}
+
+.blue {
+  background-color: #2c9bf1;
+  width: 5em;
+  height: 2em;
+  border-radius: 10px;
+}
+
+.red {
+  background-color: #da3651;
+  width: 4em;
+  height: 2em;
+  border-radius: 10px;
+}
+
+.green {
+  background-color: #40f7a8;
+  width: 3em;
+  height: 2em;
+  border-radius: 10px;
+}
+
+.yellow {
+  background-color: #f3e556;
+  width: 2em;
+  height: 2em;
+  border-radius: 10px;
+}
+
+#restart{
+  width: fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  border: none;
+  padding: 0.5em;
+  color: #eee;
+  background-color: #212121;
+}
+
+.instructions>a>div{
+  width: fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  border: none;
+  padding: 0.5em;
+  color: #212121;
+  background-color: #21212100;
+}
+
+.howToPaly{
+  padding-top: 10px;
+  padding-left: 20px;
+  cursor: pointer;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<Link>
+  <meta charset="utf-8">
+  </meta>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </meta>
+  <title>Tower Of Hanoi Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  </meta>
+  <!-- icons cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  </link>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></link>
+  <!-- font cdn -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="main.css">
+  </link>
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="r jcc aic">
+    <h1 class="bi bi-align-bottom" style="color: rgba(10, 4, 4, 0.693);"> Tower Of Hanoi Game <span class="bi bi-align-bottom"></span></h1>
+    
+  </div>
+
+  <div class="r jcsa aic">
+
+    <div class="card-list tower cr aic" id="tower-1" ondrop="drop(event, 'todo-list')" ondragover="allowDrop(event)">
+      <div class="block blue" draggable="true" id="block-1" value="4"></div>
+      <div class="block red" draggable="true" id="block-2" value="3"></div>
+      <div class="block green" draggable="true" id="block-3" value="2"></div>
+      <div class="block yellow" draggable="true" id="block-4" value="1"></div>
+    </div>
+
+    <div class="card-list tower cr aic" id="tower-2" ondrop="drop(event, 'inprogress-list')"
+      ondragover="allowDrop(event)"></div>
+
+
+    <div class="card-list tower cr aic" id="tower-3" ondrop="drop(event, 'done-list')" ondragover="allowDrop(event)">
+    </div>
+
+  </div>
+  <div style="display:flex;">
+    <a id="restart" href="./index.html">Restart</a>
+    <h4 id="ins" class="howToPaly">How To Play<span class="bi bi-question-circle-fill howToPaly"></span></h4>
+  </div>
+    
+  <h3>Moves: <span id="moves">0</span></h3>
+  <p class="center" style="color: rgba(0, 10, 12, 0.899); font-size: large;">Developed by Lokesh Kumar || 
+    <a href="https://www.linkedin.com/in/lokeshkumar30/" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAQ1JREFUSEvtl+0NwjAMRK+bwCawCUwCTAJMQjeBTUBPipEJrdS07ocQlvhBAL/c2XFDpZmimomrRYFXknhFRp0na1L8jCSmXA9Ja583B28k3UYAk3Ir6a28C5jdRlhfBL5I2ifwWRKO9I0isHfkKOnQl1piNRaj1uqC4t0UYBjArwk2RG2v5hog8uOnRTXmy6gmUIzVNNwprdHtrPOeklj3NzViEZhDb2CrMRAajaDLv6ZSyykIBZuXKLUN2hrusFmLcLA5kZ+CfAqGg/1s92XAhftYivPkNung/cGhNf49q7tMLn9xYJjwYLHm8p8VWR01p5f7kMibJVKxn/uN9+rZrreRKltzLeqfxCSKXzkteB+qwvMWAAAAAElFTkSuQmCC"/></a>
+    ||
+    <a href="https://github.com/Lokeshkmr97" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAapJREFUSEvFloFNQzEMRN1NYBOYBJgEmASYpHSSsgnooX8ff9dJ3AjpW0ItVZK7c852DrZTHHbCtRngOzO7WQjz+bl8/zIz/kpRBQbg2cw8aAYAiacKgQrwm5k9lmT8LXo3s9cegR4wKgFF5UyQ9vsWeAsY0PMMWrLnNgNvAR+dUpmnqlwm0/pUeQb8shhJ5DELd8ZBGMw7mTX8r98+FpezFvIK7ptz14jAWYq5J6muZj87Z5PyCBzVAvRfwGSN7P1GBP4OkrgfmM4E5lSj0f5VtQfO0nNxN1cw6GbPA0dDzKZZ3LLzZNRNqulONAwfaQ0WVWcZLAPPGEu8ulc3SvXKsKjSLyvfMZuiq8vTJiHmu99FFcVyykpgxtmZXzal2WsgLFQdDsecU9waoxsBWa+Wag10DhIBUk8/hogPFKqPt+ywwRoNCcqJQx8ceGa40RgdDgmxlWoUUlL+yRPVxj1Rcdp2ey8QgcMWsNFDLjNms9eP3lz+MA14MpBFBO4OmBEwAN44vcM88LAEK8BSpz6+ztQgm4Zxii+NksUn2uL0lmsUT4NkG3cD/gHWnmsfeIwhCwAAAABJRU5ErkJggg=="/></a>
+    ||
+    <a href="https://leetcode.com/imlokesh/" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAN9JREFUSEvt1dENwjAMBNDrJrAJbAKTwCaISWAT2AR0iKAoauxzU5Gf5LeuX3IQd0KnNXVyMeC/JT+ibo16A+CpNFGj3gG4ANgbjYneAFwBnD1cgYmyIRdPs600fWU1Lu7BOcq+PPG9Ah++qaQNmrgFR9C0FxmvwUvQED4Ht6AyXsJroBJewvJv5F0XAOYh5qJeA3eTq/25WnAXZVrWdVqCS6gH83kEl1EFLnFOLU6vufUAwHntTbhPgTcy86txMuY069JH4miM1d+GVVi4PbGSAcfyaqgeUTeEF3u1W9Rv6ZRDH3IQMpsAAAAASUVORK5CYII="/></a>
+  </p>
+  
+
+  <!-- moment js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  <!-- sweet alert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <!-- javascript -->
+  <script src="./main.js"></script>
+</body>
+
+</html>
